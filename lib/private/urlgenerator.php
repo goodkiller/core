@@ -163,7 +163,7 @@ class URLGenerator implements IURLGenerator {
 		$url = ($url[0] !== '/') ? '/' . $url : $url;
 
 		if (\OC::$CLI) {
-			return $this->config->getSystemValue('overwritemailurl') . $url;
+			return $this->config->getSystemValue('overwrite.cli.url') . $url;
 		}
 
 		// The ownCloud web root can already be prepended.
